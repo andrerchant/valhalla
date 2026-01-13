@@ -1,9 +1,12 @@
+// @ts-nocheck
 // components/ServicesSection.jsx
 import React from 'react';
 import { Laptop, Smartphone, Cpu, CheckCircle, Zap, Battery } from 'lucide-react';
+// import { commonIssues } from 'data/businessData';
 
 const ServicesSection = () => {
-  const servicios = [
+
+  const servicesData = [
     {
       id: 1,
       icon: <Laptop className="w-10 h-10" />,
@@ -27,7 +30,7 @@ const ServicesSection = () => {
     }
   ];
 
-  const problemasComunes = [
+  const commonIssues = [
     { id: 1, problema: "Pantalla rota o dañada", dispositivo: "Celulares/Computadoras" },
     { id: 2, problema: "Batería que no carga", dispositivo: "Celulares/Laptops" },
     { id: 3, problema: "Problemas de rendimiento", dispositivo: "Computadoras" },
@@ -49,7 +52,7 @@ const ServicesSection = () => {
         </div>
         
         <div className="grid md:grid-cols-3 gap-8">
-          {servicios.map(servicio => (
+          {servicesData.map(servicio => (
             <div key={servicio.id} className="bg-white rounded-xl shadow-lg p-8 hover:shadow-xl transition duration-300 transform hover:-translate-y-1">
               <div className="text-amber-600 mb-4">{servicio.icon}</div>
               <h3 className="text-xl font-bold mb-4 text-gray-800">{servicio.title}</h3>
@@ -72,7 +75,7 @@ const ServicesSection = () => {
             ¿Tu dispositivo tiene alguno de estos problemas?
           </h3>
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
-            {problemasComunes.map(problema => (
+            {commonIssues.map(problema => (
               <div key={problema.id} className="bg-amber-50 border border-amber-200 rounded-lg p-4 text-center hover:bg-amber-100 transition duration-300">
                 <div className="text-amber-600 font-bold text-lg mb-1">{problema.problema}</div>
                 <div className="text-sm text-amber-800">{problema.dispositivo}</div>

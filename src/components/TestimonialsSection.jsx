@@ -1,9 +1,10 @@
 // components/TestimonialsSection.jsx
 import React from 'react';
 import { Star } from 'lucide-react';
+// import { testimonialsData } from 'data/businessData';
 
 const TestimonialsSection = () => {
-  const testimonios = [
+  const testimonialsData = [
     {
       id: 1,
       name: "Carlos Martínez",
@@ -43,7 +44,7 @@ const TestimonialsSection = () => {
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4">
-            Lo que dicen nuestros clientes sobre <span className="text-amber-600">sus reparaciones</span>
+            Lo que dicen nuestros clientes sobre <span className="text-yellow-600">sus reparaciones</span>
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
             Más de 1,000 computadoras y celulares reparados con satisfacción garantizada
@@ -51,7 +52,7 @@ const TestimonialsSection = () => {
         </div>
         
         <div className="grid md:grid-cols-2 gap-8">
-          {testimonios.map(testimonio => (
+          {testimonialsData.map(testimonio => (
             <div key={testimonio.id} className="bg-gray-50 rounded-xl p-8 border border-gray-200">
               <div className="flex items-center mb-4">
                 <div className="bg-blue-100 text-blue-800 font-bold w-12 h-12 rounded-full flex items-center justify-center mr-4">

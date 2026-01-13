@@ -1,6 +1,6 @@
 // components/Header.jsx
 import React from 'react';
-import { Phone, Clock, Wrench } from 'lucide-react';
+import { Phone, Clock } from 'lucide-react';
 
 const Header = ({ businessInfo }) => {
   return (
@@ -11,7 +11,7 @@ const Header = ({ businessInfo }) => {
           <div className="flex items-center space-x-3 mb-4 md:mb-0">
             <div className=" p-2 rounded-lg">
 
-              <img src="/logotipo.svg" alt={businessInfo.name} width={105} />
+              <img src="/logotipo.svg" alt={businessInfo.name} width={88} />
             </div>
             <div>
               <h1 className="text-2xl font-bold text-gray-800">{businessInfo.slogan}</h1>

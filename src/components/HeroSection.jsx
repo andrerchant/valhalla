@@ -6,7 +6,7 @@ import RepairFormEnhanced from './RepairFormEnhanced';
 
 const HeroSection = ({ businessInfo, onFormSubmit, isFormSubmitted }) => {
   const benefits = [
-    "Diagnóstico Gratuito",
+    "Diagnóstico profesional",
     "Repuestos Originales",
     "Garantía de 90 Días",
     "Mismo Día*"
@@ -18,7 +18,7 @@ const HeroSection = ({ businessInfo, onFormSubmit, isFormSubmitted }) => {
         <div className="grid md:grid-cols-2 gap-12 items-center">
           <div>
             <h1 className="text-4xl md:text-5xl font-bold mb-6">
-              Está tu <span className="text-amber-300">Computadora</span> o <span className="text-amber-300">Celular</span> roto?<br />
+              ¿Está tu <span className="text-amber-300">Computadora</span> o <span className="text-amber-300">Celular</span> roto?<br />
               <span className="text-3xl md:text-4xl">Nosotros lo <span className="text-amber-300">reparamos</span></span>
             </h1>
             
