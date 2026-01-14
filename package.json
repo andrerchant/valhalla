@@ -1,5 +1,6 @@
 {
   "name": "valhalla-workshop",
+  "description": "Taller de reparación en equipos de cómputo y celulares",
   "version": "1.0.0",
   "private": true,
   "homepage": "https://andrerchant.github.io/valhalla",

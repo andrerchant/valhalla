@@ -217,7 +217,7 @@ _Por favor, confirme recepción y proporcione disponibilidad para diagnóstico._
               value={formData.brand}
               onChange={handleChange}
               className="w-full p-3 border border-gray-300 text-gray-500 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-green-500"
-              placeholder="Ej: Apple, Dell, Samsung"
+              placeholder="Ej: Lenovo, Dell, Samsung"
             />
           </div>
           <div>
@@ -228,7 +228,7 @@ _Por favor, confirme recepción y proporcione disponibilidad para diagnóstico._
               value={formData.model}
               onChange={handleChange}
               className="w-full p-3 border border-gray-300 text-gray-500 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-green-500"
-              placeholder="Ej: iPhone 13, ThinkPad X1"
+              placeholder="Ej: Pavilion 15, ThinkPad X1"
             />
           </div>
         </div>
@@ -246,7 +246,7 @@ _Por favor, confirme recepción y proporcione disponibilidad para diagnóstico._
             <option value="baja">Baja 🌌</option>
             <option value="normal">Normal ✌️</option>
             <option value="moderada">Moderada‼️</option>
-            <option value="urgente">🚨Urgente🚨 </option>
+            <option value="urgente">Urgente🚨 </option>
           </select>
         </div>
         
@@ -257,10 +257,10 @@ _Por favor, confirme recepción y proporcione disponibilidad para diagnóstico._
             name="issue"
             value={formData.issue}
             onChange={handleChange}
-            required
-            rows="4"
+            rows={4}
             className="w-full p-3 border border-gray-300 text-gray-500 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-green-500"
             placeholder="Ej: Pantalla rota, no enciende, se mojó, problemas de rendimiento..."
+            required
           />
         </div>
         

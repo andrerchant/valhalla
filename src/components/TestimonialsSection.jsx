@@ -16,8 +16,8 @@ const TestimonialsSection = () => {
     {
       id: 2,
       name: "Ana Rodríguez",
-      device: "iPhone 13",
-      comment: "Cambiaron la pantalla de mi iPhone en 2 horas. Quedó como nuevo y con garantía incluida.",
+      device: "Motorola Edge 60",
+      comment: "Cambiaron la pantalla de mi Motorola en tiempo record. Quedó como nuevo y con garantía incluida.",
       rating: 5,
       date: "28 Ene 2024"
     },
@@ -25,7 +25,7 @@ const TestimonialsSection = () => {
       id: 3,
       name: "Roberto Sánchez",
       device: "Lenovo ThinkPad",
-      comment: "Diagnóstico gratuito y reparación de mi laptop de trabajo en el mismo día. Excelente servicio técnico.",
+      comment: "Diagnóstico confiable y repararon mi laptop de trabajo. Excelente servicio técnico.",
       rating: 4,
       date: "5 Feb 2024"
     },
@@ -47,7 +47,7 @@ const TestimonialsSection = () => {
             Lo que dicen nuestros clientes sobre <span className="text-yellow-600">sus reparaciones</span>
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Más de 1,000 computadoras y celulares reparados con satisfacción garantizada
+            Cientos computadoras y celulares reparados con satisfacción garantizada
           </p>
         </div>
         

@@ -23,7 +23,7 @@ const HeroSection = ({ businessInfo, onFormSubmit, isFormSubmitted }) => {
             </h1>
             
             <p className="text-xl mb-8 text-amber-100">
-              Especialistas en reparación de <strong>laptops, PCs, Mac, iPhones y Android</strong>. 
+              Especialistas en reparación de <strong>laptops, PCs, Mac y Android</strong>. 
               Diagnóstico profundo y garantía de un servicio confiable en todas nuestras reparaciones.
             </p>
             

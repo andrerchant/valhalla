@@ -25,8 +25,8 @@ const testimonialsData = [
     {
       id: 2,
       name: "Ana Rodríguez",
-      device: "iPhone 13",
-      comment: "Cambiaron la pantalla de mi iPhone en 2 horas. Quedó como nuevo y con garantía incluida.",
+      device: "Motorola Edge 60",
+      comment: "Cambiaron la pantalla de mi Motorola en tiempo record. Quedó como nuevo y con garantía incluida.",
       rating: 5,
       date: "28 Ene 2024"
     },

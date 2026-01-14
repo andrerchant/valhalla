@@ -18,7 +18,7 @@ const ServicesSection = () => {
       id: 2,
       icon: <Smartphone className="w-10 h-10" />,
       title: "Reparación de Celulares",
-      description: "Reparamos todas las marcas: iPhone, Samsung, Xiaomi, Motorola y más. Pantallas, baterías, puertos de carga y sistemas.",
+      description: "Reparamos todas las marcas: Samsung, Xiaomi, Motorola y más. Pantallas, baterías, puertos de carga y sistemas.",
       features: ["Pantallas originales", "Cambio de baterías", "Reparación de agua", "Software y liberación"]
     },
     {
@@ -47,7 +47,7 @@ const ServicesSection = () => {
             Reparamos <span className="text-amber-600">diversos tipos de dispositivos</span>
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Desde una pantalla rota de iPhone hasta una laptop que no enciende, tenemos la solución técnica que necesitas.
+            Desde una pantalla rota de un Smartphone hasta una laptop que no enciende, tenemos la solución técnica que necesitas.
           </p>
         </div>
         

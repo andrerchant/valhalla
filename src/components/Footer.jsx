@@ -8,7 +8,6 @@ const Footer = ({ businessInfo }) => {
   const services = [
     "Reparación de Laptops",
     "Reparación de PCs",
-    "Reparación de iPhones",
     "Reparación de Android",
     "Recuperación de Datos"
   ];
