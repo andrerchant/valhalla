@@ -1,0 +1,33 @@
+{
+    "name": "Valhalla Repair",
+    "short_name": "valhalla",
+    "theme_color": "#1f241e",
+    "background_color": "#063d7f",
+    "icons": [
+        {
+            "src": "/android-chrome-192x192.png",
+            "sizes": "192x192",
+            "type": "image/png"
+        },
+        {
+            "purpose": "any",
+            "src": "/android-chrome-512x512.png",
+            "sizes": "512x512",
+            "type": "image/png"
+        },
+        {
+            "purpose": "maskable",
+            "src": "/android-chrome-maskable-512x512.png",
+            "sizes": "512x512",
+            "type": "image/png"
+        }
+    ],
+    "orientation": "portrait",
+    "display": "standalone",
+    "dir": "auto",
+    "lang": "es-MX",
+    "start_url": "https://www.valhalla-repair.com",
+    "scope": "https://www.valhalla-repair.com",
+    "description": "Taller de reparación en equipos de cómputo y celulares",
+    "id": "https://www.valhalla-repair.com"
+}
