@@ -1,6 +1,6 @@
 // components/RepairFormEnhanced.jsx
 import React, { useState } from 'react';
-import { Laptop, Smartphone, MessageCircle, Check } from 'lucide-react';
+import { Laptop, Smartphone, MessageCircle, Check, Monitor, Tablet } from 'lucide-react';
 
 const RepairFormEnhanced = ({ businessInfo, variant = 'default' }) => {
   const [formData, setFormData] = useState({
@@ -19,7 +19,7 @@ const RepairFormEnhanced = ({ businessInfo, variant = 'default' }) => {
 
   // Configuración del negocio (ajusta estos valores)
   const config = {
-    whatsappNumber: '5215512345678', // Número con código de país
+    whatsappNumber: '5215610834124', // Número con código de país
     defaultCountryCode: '52', // México
     businessName: businessInfo?.name || 'TechFix Pro',
     hours: '9:00 AM - 7:00 PM'
@@ -44,30 +44,39 @@ const RepairFormEnhanced = ({ businessInfo, variant = 'default' }) => {
 
   const formatWhatsAppMessage = () => {
     const phone = formatPhoneNumber(formData.phone);
+    const datetime =new Intl.DateTimeFormat('es-MX', {
+  dateStyle: 'full',
+  timeStyle: 'long',
+  timeZone: 'America/Mexico_City' 
+}).format(new Date())
     
+    // const messageTemplate = `ZZZZ`;
+
     // Plantilla de mensaje profesional
-    const messageTemplate = `📋 *NUEVA SOLICITUD DE REPARACIÓN* 📋
+    const messageTemplate = `⚡️ *VALHALLA TALLER ELÉCTRICO* ⚡️
     
 👤 *Cliente:* ${formData.name}
 📞 *Contacto:* ${formData.phone}
 ${formData.email ? `📧 *Email:* ${formData.email}\n` : ''}
 
 🛠️ *INFORMACIÓN DEL DISPOSITIVO*
-• *Tipo:* ${formData.deviceType === 'computadora' ? '💻 Computadora' : '📱 Celular'}
-${formData.brand ? `• *Marca:* ${formData.brand}\n` : ''}
-${formData.model ? `• *Modelo:* ${formData.model}\n` : ''}
-• *Urgencia:* ${formData.urgency === 'urgente' ? '🚨 URGENTE' : '🕐 Normal'}
+• *Tipo:* ${formData.deviceType === 'computadora' ? '🖥️ Computadora' :
+    formData.deviceType === 'laptop' ? '💻 Laptop' :
+      formData.deviceType === 'tablet' ? '📱 Tablet' : '📱 Celular'}
+${formData.brand ? `• *Marca:* ${formData.brand}` : ''}
+${formData.model ? `• *Modelo:* ${formData.model}` : ''}
+• *Urgencia:* ${formData.urgency === 'urgente' ? '🚨🚨 URGENTE 🚨🚨' : `🕐 ${formData.urgency}`}
 
 🔧 *DESCRIPCIÓN DEL PROBLEMA:*
 ${formData.issue}
 
-🏪 *Taller:* ${config.businessName}
-⏰ *Horario:* ${config.hours}
-🌐 *Solicitud vía web*
+⏰ *Horario:* ${config.hours} 
+🌐 *Solicitud vía web www.valhalla-repair.com*
+🗓️ *Fecha y hora de solicitud:* _Enviado ${datetime}_
 
 _Por favor, confirme recepción y proporcione disponibilidad para diagnóstico._`;
     
-    return `https://wa.me/${config.whatsappNumber}?text=${encodeURIComponent(messageTemplate)}`;
+    return `https://api.whatsapp.com/send/?phone=${config.whatsappNumber}&text=${encodeURIComponent(messageTemplate)}&type=phone_number&app_absent=0`;
   };
 
   const handleSubmit = (e) => {
@@ -152,6 +161,7 @@ _Por favor, confirme recepción y proporcione disponibilidad para diagnóstico._
         <div className="mb-6">
           <label className="block text-gray-700 mb-3 font-medium">¿Qué dispositivo necesita reparación?</label>
           <div className="grid grid-cols-2 gap-3">
+            
             <button
               type="button"
               onClick={() => setFormData(prev => ({ ...prev, deviceType: 'computadora' }))}
@@ -161,9 +171,23 @@ _Por favor, confirme recepción y proporcione disponibilidad para diagnóstico._
                   : 'border-gray-300 text-gray-400 hover:border-green-300'
               }`}
             >
-              <Laptop className="w-6 h-6 mx-auto mb-2" />
-              <span>Computadora/Laptop</span>
+              <Monitor className="w-6 h-6 mx-auto mb-2" />
+              <span>Desktop</span>
             </button>
+            
+            <button
+              type="button"
+              onClick={() => setFormData(prev => ({ ...prev, deviceType: 'laptop' }))}
+              className={`p-4 border rounded-lg text-center transition-all ${
+                formData.deviceType === 'laptop' 
+                  ? 'border-green-500 bg-green-50 text-green-700' 
+                  : 'border-gray-300 text-gray-400 hover:border-green-300'
+              }`}
+            >
+              <Laptop className="w-6 h-6 mx-auto mb-2" />
+              <span>Laptop</span>
+            </button>
+
             <button
               type="button"
               onClick={() => setFormData(prev => ({ ...prev, deviceType: 'celular' }))}
@@ -174,7 +198,20 @@ _Por favor, confirme recepción y proporcione disponibilidad para diagnóstico._
               }`}
             >
               <Smartphone className="w-6 h-6 mx-auto mb-2" />
-              <span>Celular/Tablet</span>
+              <span>Celular</span>
+            </button>
+            
+            <button
+              type="button"
+              onClick={() => setFormData(prev => ({ ...prev, deviceType: 'tablet' }))}
+              className={`p-4 border rounded-lg text-center transition-all ${
+                formData.deviceType === 'tablet' 
+                  ? 'border-green-500 bg-green-50 text-green-700' 
+                  : 'border-gray-300 text-gray-400 hover:border-green-300'
+              }`}
+            >
+              <Tablet className="w-6 h-6 mx-auto mb-2" />
+              <span>Tablet</span>
             </button>
           </div>
         </div>
@@ -198,6 +235,8 @@ _Por favor, confirme recepción y proporcione disponibilidad para diagnóstico._
             <input
               type="tel"
               name="phone"
+              inputMode="numeric"
+              pattern="[0-9]{10}"
               value={formData.phone}
               onChange={handleChange}
               required

@@ -72,6 +72,10 @@ _Por favor, contactar para agendar diagnóstico._`;
   };
 
   // ... (resto del JSX del formulario se mantiene igual)
+  const scrollToElement = () => {
+    const element = document.querySelector('form');
+    element?.scrollIntoView({ behavior: 'smooth' });
+  };
   
   return (
     <div className={`rounded-xl shadow-2xl p-8 ${variant === 'hero' ? 'bg-white text-gray-800' : 'bg-white/10 backdrop-blur-sm text-white'}`}>
@@ -88,7 +92,8 @@ _Por favor, contactar para agendar diagnóstico._`;
         {/* Campos del formulario existentes... */}
         
         <button 
-          type="submit"
+          type="button"
+          onClick={scrollToElement}
           className={`w-full font-bold py-4 rounded-lg transition duration-300 shadow-lg ${
             variant === 'hero' 
               ? 'bg-gradient-to-r from-green-600 to-green-800 text-white hover:from-green-700 hover:to-green-900'
@@ -97,6 +102,16 @@ _Por favor, contactar para agendar diagnóstico._`;
         >
           📱 ENVIAR POR WHATSAPP
         </button>
+        {/* <button 
+          type="submit"
+          className={`w-full font-bold py-4 rounded-lg transition duration-300 shadow-lg ${
+            variant === 'hero' 
+              ? 'bg-gradient-to-r from-green-600 to-green-800 text-white hover:from-green-700 hover:to-green-900'
+              : 'bg-gradient-to-r from-green-500 to-green-600 text-white hover:from-green-400 hover:to-green-500'
+          }`}
+        >
+          📱 ENVIAR POR WHATSAPP
+        </button> */}
         
         <p className="text-xs text-center mt-4">
           {variant === 'hero' 

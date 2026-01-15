@@ -4,7 +4,7 @@ import { Phone, Clock } from 'lucide-react';
 
 const Header = ({ businessInfo }) => {
   return (
-    <header className="bg-white shadow-md sticky top-0 z-50">
+    <header className="bg-white shadow-md sm:sticky top-0 z-50">
       <div className="container mx-auto px-4 py-4">
         <div className="flex flex-col md:flex-row justify-between items-center">
           {/* Logo */}
@@ -20,7 +20,7 @@ const Header = ({ businessInfo }) => {
           </div>
 
           {/* Información de contacto */}
-          <div className="flex flex-col md:flex-row space-y-2 md:space-y-0 md:space-x-6">
+          <div className="flex gap-4 md:gap-8 sm:flex-row flex-col">
             <div className="flex items-center">
               <Phone className="w-5 h-5 text-amber-600 mr-2" />
               <div>

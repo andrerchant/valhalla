@@ -13,7 +13,6 @@ const isFormSubmitted = false;
 const handleFormSubmit = (formData) => {
     console.log('Formulario enviado:', formData);
     // setIsFormSubmitted(true);
-    // Aquí iría la lógica para enviar a backend
   };
 
 const App = () => {

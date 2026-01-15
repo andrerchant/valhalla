@@ -6,7 +6,7 @@ const businessData = {
   whatsapp: "56 1083 4124",
   whatsappNumber: '5215610834124',
   email: "valhalla.repairworkshop@gmail.com",
-  address: "Av. Tecnología #123, Col. Centro, Ciudad de México, CDMX 06000",
+  address: "Dark Workshop en Col. Santa María la Ribera, Ciudad de México, CDMX 06400",
   hours: {
     weekdays: "Lunes a Viernes: 9:00 AM - 7:00 PM",
     saturday: "Sábados: 10:00 AM - 3:00 PM"

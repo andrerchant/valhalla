@@ -11,9 +11,17 @@ const ContactSection = ({ businessInfo, onFormSubmit }) => {
           <div>
             <h2 className="text-3xl md:text-4xl font-bold mb-6">¿Listo para reparar tu dispositivo?</h2>
             <p className="text-xl mb-8 text-blue-100">
-              Visítanos en nuestro taller especializado o agenda una cita para diagnóstico express.
+              Estamos listos para ayudarte a devolverle la vida a tu equipo o celular.
             </p>
             
+
+            <div className="space-y-6"> 
+              <p className="mb-8">
+                  <em>Envía o recibe tu equipo por medio de nuestro servicio de paquetería o agenda una visita con técnico:</em>
+              </p>
+            </div>
+
+
             <div className="space-y-6">
               <div className="flex items-start">
                 <MapPin className="w-6 h-6 text-yellow-300 mr-4 mt-1" />
@@ -73,7 +81,7 @@ const ContactSection = ({ businessInfo, onFormSubmit }) => {
           
           <div>
             <RepairForm 
-              onSubmit={onFormSubmit}
+              businessInfo={businessInfo}
               variant="contact"
             />
           </div>

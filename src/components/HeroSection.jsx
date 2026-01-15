@@ -9,7 +9,7 @@ const HeroSection = ({ businessInfo, onFormSubmit, isFormSubmitted }) => {
     "Diagnóstico profesional",
     "Repuestos Originales",
     "Garantía de 90 Días",
-    "Mismo Día*"
+    "Técnicos Certificados"
   ];
 
   return (
@@ -57,7 +57,9 @@ const HeroSection = ({ businessInfo, onFormSubmit, isFormSubmitted }) => {
             variant="hero"
           /> */}
 
-            <RepairFormEnhanced businessInfo={businessInfo} variant="hero" />
+            <div id='contacto'>
+              <RepairFormEnhanced businessInfo={businessInfo} variant="hero"/>
+            </div>
 
         </div>
       </div>

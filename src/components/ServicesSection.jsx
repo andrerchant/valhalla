@@ -78,7 +78,7 @@ const ServicesSection = () => {
             {commonIssues.map(problema => (
               <div key={problema.id} className="bg-amber-50 border border-amber-200 rounded-lg p-4 text-center hover:bg-amber-100 transition duration-300">
                 <div className="text-amber-600 font-bold text-lg mb-1">{problema.problema}</div>
-                <div className="text-sm text-amber-800">{problema.dispositivo}</div>
+                <div className="hidden md:block text-sm text-amber-800">{problema.dispositivo}</div>
               </div>
             ))}
           </div>
